@@ -1,0 +1,26 @@
+
+
+.masthead {
+    height: 90vh;
+    min-height: 350px;
+    background-image: url('https://raw.githubusercontent.com/CreeperExplosion/blog-images/master/3840x2160-baby-blue-solid-color-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.header-image{
+  width : 8em;
+  margin-bottom: 1em;
+}
+.carousel-item{
+  height: 50vh;
+}
+.post-header{
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+.post-img{
+  width: 50vw;
+  text-align: center;
+}

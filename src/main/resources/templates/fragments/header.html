@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<nav class="navbar navbar-light bg-light navbar-expand-sm pb-4 pt-4  shadow fixed-top" th:fragment="top-bar">
+
+    <style>
+        .fixed-top {
+            opacity: .95;
+        }
+    </style>
+    <div class="container">
+        <a class="navbar-brand mr-auto " href="/home">
+            <img th:src="@{/images/logo.png}" class="d-inline-block mr-2" width="30" height="30" alt="">
+            <div class="d-inline-block mr-1 "> Algebra's <span><b>PALACE</b></span></div>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse  navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ml-4">
+                    <a href="/home" class="nav-link"> HOME </a>
+                </li>
+                <li class="nav-item ml-4">
+                    <a href="#" class="nav-link">Feeling lucky</a>
+                </li>
+                <li class="nav-item ml-4">
+                    <a href="#" class="nav-link">GitHub Repo</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item mr-4 ml-4">
+                    <a href="#" class="nav-link ">Admin Page</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
