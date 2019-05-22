@@ -9,18 +9,13 @@
     background-repeat: no-repeat;
   }
 
-.header-image{
-  width : 8em;
-  margin-bottom: 1em;
-}
-.carousel-item{
-  height: 50vh;
-}
 .post-header{
   padding-top: 3em;
   padding-bottom: 1em;
 }
-.post-img{
-  width: 50vw;
+.post{
+  width: 80vw;
   text-align: center;
+  margin: 2em auto;
+  max-width: 650px;
 }

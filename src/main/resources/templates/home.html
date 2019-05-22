@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   1
-  <link href="/bootstrap4-glyphicons/css/bootstrap-glyphicons.min.css" rel="stylesheet" type="text/css" />
   <!-- css -->
 
   <link rel="stylesheet" th:href="@{/css/home.css}">
@@ -27,7 +26,7 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center">
-          <img th:src="@{/images/logo.png}" alt="logo" class="header-image">
+          <img th:src="@{/images/logo.png}" alt="logo" class="mb-2" style="width: 8em;">
           <h1 class="font-weight-light">Algebra's palace</h1>
           <p class="lead">The most exciting blog provable by <span class="badge badge-light p-2">MATH</span></p>
         </div>
@@ -45,8 +44,7 @@
     </p>
   </div>
   <!-- featured post -->
-  <div class="container mt-2" style="width: 65vw;">
-
+  <div class="post container">
     <div class="card">
       <img class="card-img-top"
         src="https://raw.githubusercontent.com/CreeperExplosion/blog-images/master/orange-minimalism.jpg"
