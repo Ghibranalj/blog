@@ -19,7 +19,7 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         String thumbnailURL = "https://raw.githubusercontent.com/CreeperExplosion/blog-images/master/3840x2160-baby-blue-solid-color-background.jpg";
-        String lorem = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui temporibus vel eligendi esse necessitatibus? Animi, soluta voluptate nemo cupiditate quaerat consequatur consectetur quis nobis accusamus placeat quibusdam, nulla quos aliquid laboriosam! Quos quibusdam a dignissimos nisi qui blanditiis praesentium deleniti, dolore, facilis fugit sint eaque quo temporibus. Nulla, temporibus veniam!";
+        String lorem = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui temporibus vel eligendi esse necessitatibus? Animi, soluta voluptate nemo cupiditate quaerat consequatur consectetur quis nobis accusamus placeat quibusdam, nulla quos aliquid laboriosam! Quos quibusdam";
 
         for (int i = 0; i < 10; i++) {
             var number = i + "";

@@ -1,21 +1,54 @@
-
-
+body {
+  margin: 0;
+}
 .masthead {
-    height: 90vh;
-    min-height: 350px;
-    background-image: url('https://raw.githubusercontent.com/CreeperExplosion/blog-images/master/3840x2160-baby-blue-solid-color-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+  height: 90vh;
+  min-height: 350px;
+  background-image: url("https://raw.githubusercontent.com/CreeperExplosion/blog-images/master/3840x2160-baby-blue-solid-color-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-.post-header{
+.post-header {
   padding-top: 3em;
   padding-bottom: 1em;
 }
-.post{
-  width: 80vw;
+.post {
+  width: 95vw;
   text-align: center;
   margin: 2em auto;
-  max-width: 650px;
+  max-width: 850px;
+}
+
+.carousel {
+  position: relative;
+}
+
+ol.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  /* background-color: #e9ecef; */
+  border-block: grey;
+  margin-top: -4px;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  background-color: #e9ecef;
+  margin-top: 2px;
+  float: left;
+  width: 15%;
+  height: 10px;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  /* background: transparent; */
+}
+
+ol.carousel-indicators li.active {
+  background: skyblue;
 }
