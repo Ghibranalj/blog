@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+.masthead {
+  height: 65vh;
+  min-height: 250px;
+  background: center center no-repeat fixed/cover;
+  margin-top: 5.5em;
+}
+.masthead .container {
+  width: 90vw;
+  max-width: 800px;
+}
+
+.blog-content {
+  min-height: 40vh;
+}
+
+@media (max-width: 767px) {
+  .masthead {
+    background-attachment: initial;
+  }
+}

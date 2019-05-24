@@ -8,7 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -24,6 +26,8 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.TABLE)
     private long id;
 
+    private final String name;
+
     @Lob
     private final String content;
 
@@ -34,17 +38,22 @@ public class Comment {
     private final Post post;
 
     public Comment() {
-        this(null, null, null);
+        this(null, null, null, null);
     }
 
-    public Comment(String content, Date date, Post post) {
+    public Comment(String name, String content, Date date, Post post) {
+        this.name = name;
         this.content = content;
         this.date = date;
         this.post = post;
     }
 
     public long getId() {
-        return this.id;
+        return id;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public String getContent() {
@@ -67,18 +76,17 @@ public class Comment {
             return false;
         }
         Comment comment = (Comment) o;
-        return id == comment.id && Objects.equals(content, comment.content) && Objects.equals(date, comment.date)
-                && Objects.equals(post, comment.post);
+        return comment.getId() == id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, content, date, post);
+        return Objects.hash(name, content, date, post);
     }
 
     @Override
     public String toString() {
-        return "{" + " id='" + getId() + "'" + ", content='" + getContent() + "'" + ", date='" + getDate() + "'"
+        return "{" + " name='" + getName() + "'" + ", content='" + getContent() + "'" + ", date='" + getDate() + "'"
                 + ", post='" + getPost() + "'" + "}";
     }
 

@@ -49,7 +49,12 @@ public class BlogVisitorMVC {
 
     @GetMapping("/blog/{url}")
     public String viewBlogEntry(Model model, @PathVariable String url) {
-        model.addAttribute("post", service.getPost(url));
+        var post = service.getPost(url);
+
+        var comments = service.getCommentInPost(post);
+
+        model.addAttribute("post", post);
+        model.addAttribute("comments", comments);
         return "blog";
     }
 }

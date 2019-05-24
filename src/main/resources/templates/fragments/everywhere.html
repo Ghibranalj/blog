@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 
-<nav
-  th:fragment="top-bar"
-  class="navbar navbar-light bg-light navbar-expand-sm pb-4 pt-4  shadow fixed-top"
-  style="opacity: 0.95"
->
+<nav th:fragment="top-bar" class="navbar navbar-light bg-light navbar-expand-md pb-4 pt-4  shadow fixed-top"
+  style="opacity: 0.95">
   <div class="container">
     <a class="navbar-brand mr-auto " href="/home">
-      <img
-        th:src="@{/images/logo.png}"
-        class="d-inline-block mr-2"
-        width="30"
-        height="30"
-        alt=""
-      />
+      <img th:src="@{/images/logo.png}" class="d-inline-block mr-2" width="30" height="30" alt="" />
       <div class="d-inline-block mr-1 ">
         Algebra's <span><b>PALACE</b></span>
       </div>
     </a>
-    <button
-      class="navbar-toggler"
-      data-toggle="collapse"
-      data-target="#navbarMenu"
-    >
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse  navbar-collapse" id="navbarMenu">
@@ -34,7 +21,7 @@
           <a href="#" class="nav-link">Feeling lucky</a>
         </li>
         <li class="nav-item ml-4">
-          <a href="#" class="nav-link">My GitHub Repo</a>
+          <a href="#" class="nav-link">My GitHub</a>
         </li>
       </ul>
 
@@ -48,12 +35,8 @@
 </nav>
 
 <!-- FOOTER -->
-<footer
-  th:fragment="footer"
-  class="page-footer font-small bg-dark pt-4 mb-0"
-  style="color: #e9ecef; padding-bottom: 4em"
-  ;
->
+<footer th:fragment="footer" class="page-footer font-small bg-dark mb-0"
+  style="color: #e9ecef; padding-bottom: 4em ;  padding-top: 4em;">
   <div class="container text-center text-md-center">
     <!-- Grid row -->
     <div class="row">
@@ -64,10 +47,8 @@
         <p>
           i know. i know you want more.
 
-          <small
-            >someday there'll be more !
-            <span class="badge badge-light p-1">i promise</span></small
-          >
+          <small>someday there'll be more !
+            <span class="badge badge-light p-1">i promise</span></small>
         </p>
       </div>
       <!-- Grid column -->
@@ -81,18 +62,17 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="https://github.com/explore">browse GitHub</a>
+            <a style="color: 	#008689" href="https://github.com/explore">browse GitHub</a>
           </li>
           <li>
-            <a href="https://www.youtube.com/?feature=ytca">Watch Youtube</a>
+            <a style="color: 	#008689" href="https://www.youtube.com/?feature=ytca">Watch Youtube</a>
           </li>
           <li>
-            <a href="https://www.reddit.com">Read reddit</a>
+            <a style="color: 	#008689" href="https://www.reddit.com">Read reddit</a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw"
-              >SUB to pewdiepie</a
-            >
+            <a style="color: 	#008689" href="https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw">SUB to
+              pewdiepie</a>
           </li>
         </ul>
       </div>

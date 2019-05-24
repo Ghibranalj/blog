@@ -1,6 +1,7 @@
 package xyz.ghibran.blog.data;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -8,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,23 +30,27 @@ public class Post {
     private final String title;
 
     @Lob
-    private final String content;
+    private final String subTitle;
 
     private final String thumbnailURL;
 
     @Temporal(TemporalType.TIMESTAMP)
     private final Date date;
 
+    @ManyToMany
+    private final List<PostSection> sections;
+
     public Post() {
-        this(null, null, null, null, null);
+        this(null, null, null, null, null, null);
     }
 
-    public Post(String url, String title, String content, String thumbnailURL, Date date) {
+    public Post(String url, String title, String subTitle, String thumbnailURL, Date date, List<PostSection> sections) {
         this.url = url;
         this.title = title;
-        this.content = content;
+        this.subTitle = subTitle;
         this.thumbnailURL = thumbnailURL;
         this.date = date;
+        this.sections = sections;
     }
 
     public long getId() {
@@ -58,8 +65,8 @@ public class Post {
         return this.title;
     }
 
-    public String getContent() {
-        return this.content;
+    public String getSubTitle() {
+        return this.subTitle;
     }
 
     public String getThumbnailURL() {
@@ -68,6 +75,15 @@ public class Post {
 
     public Date getDate() {
         return this.date;
+    }
+
+    public List<PostSection> getSections() {
+        return this.sections;
+    }
+
+    public Post id(long id) {
+        this.id = id;
+        return this;
     }
 
     @Override
@@ -79,20 +95,20 @@ public class Post {
         }
         Post post = (Post) o;
         return id == post.id && Objects.equals(url, post.url) && Objects.equals(title, post.title)
-                && Objects.equals(content, post.content) && Objects.equals(thumbnailURL, post.thumbnailURL)
-                && Objects.equals(date, post.date);
+                && Objects.equals(subTitle, post.subTitle) && Objects.equals(thumbnailURL, post.thumbnailURL)
+                && Objects.equals(date, post.date) && Objects.equals(sections, post.sections);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, url, title, content, thumbnailURL, date);
+        return Objects.hash(id, url, title, subTitle, thumbnailURL, date, sections);
     }
 
     @Override
     public String toString() {
         return "{" + " id='" + getId() + "'" + ", url='" + getUrl() + "'" + ", title='" + getTitle() + "'"
-                + ", content='" + getContent() + "'" + ", thumbnailURL='" + getThumbnailURL() + "'" + ", date='"
-                + getDate() + "'" + "}";
+                + ", subTitle='" + getSubTitle() + "'" + ", thumbnailURL='" + getThumbnailURL() + "'" + ", date='"
+                + getDate() + "'" + ", sections='" + getSections().toString() + "'" + "}";
     }
 
 }

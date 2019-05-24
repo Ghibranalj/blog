@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import xyz.ghibran.blog.data.Comment;
+import xyz.ghibran.blog.data.CommentRepository;
 import xyz.ghibran.blog.data.Post;
 import xyz.ghibran.blog.data.PostRepository;
 
@@ -19,6 +21,8 @@ public class BlogVisitorService {
 
     @Autowired
     private PostRepository postRepo;
+    @Autowired
+    private CommentRepository commentRepo;
 
     /**
      * @param page  page number
@@ -48,6 +52,12 @@ public class BlogVisitorService {
 
     public Post getPost(String url) {
         return postRepo.findByUrl(url);
+    }
+
+    public List<Comment> getCommentInPost(Post post) {
+        var value = new LinkedList<Comment>();
+        commentRepo.findAllByPost(post).forEach(value::add);
+        return value;
     }
 
 }
