@@ -66,6 +66,7 @@
               Card title
             </h3>
           </a>
+          <small class="font-weight-light muted"><span th:text="${#calendars.format(firstPost.getDate(),'dd MMMM yyyy')}">13 May 2011</span></small>
 
           <p class="card-text mb-3" th:text="${firstPost.getSubTitle()}">
             Lorem, ipsum dolor.
@@ -84,6 +85,8 @@
           <a th:href="${'blog/' + firstPost.getUrl()}" class="link-unstyled">
             <h3 class="card-title" th:text="${post.getTitle()}">Card title</h3>
           </a>
+          <small class="font-weight-light muted"><span th:text="${#calendars.format(post.getDate(),'dd MMMM yyyy')}">date</span></small>
+
           <p class="card-text mb-3" th:text="${post.getSubTitle()}">
             Lorem, ipsum dolor.
           </p>
@@ -95,7 +98,7 @@
     <!-- carousel indicator -->
     <ol class="carousel-indicators hidden">
       <li class="active" data-target="#postCarousel" data-slide-to="0"></li>
-      <li th:each=" number : ${numberOfPost}" data-target="#postCarousel" th:data-slide-to="${number}"></li>
+      <li th:each=" post,iterStat : ${posts}" data-target="#postCarousel" th:data-slide-to="${iterStat}"></li>
     </ol>
     <!--  -->
 

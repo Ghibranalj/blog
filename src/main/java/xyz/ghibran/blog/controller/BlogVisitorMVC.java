@@ -1,7 +1,5 @@
 package xyz.ghibran.blog.controller;
 
-import java.util.LinkedList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,17 +30,9 @@ public class BlogVisitorMVC {
 
         final int postPerPage = 5;
 
-        var number = new LinkedList<Integer>();
-
         var posts = service.getPostInPage(page, postPerPage);
         model.addAttribute("firstPost", posts.get(0));
         model.addAttribute("posts", posts.subList(1, posts.size()));
-
-        for (int i = 1; i < posts.size(); i++) {
-            number.add(i);
-        }
-
-        model.addAttribute("numberOfPost", number);
 
         return "home";
     }

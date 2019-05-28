@@ -5,10 +5,13 @@ import java.util.Date;
 import java.util.LinkedList;
 
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import xyz.ghibran.blog.data.repository.CommentRepository;
+import xyz.ghibran.blog.data.repository.PostRepository;
+import xyz.ghibran.blog.data.repository.PostSectionRepository;
 
 /**
  * DataLoader

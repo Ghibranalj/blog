@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import xyz.ghibran.blog.data.Comment;
-import xyz.ghibran.blog.data.CommentRepository;
 import xyz.ghibran.blog.data.Post;
-import xyz.ghibran.blog.data.PostRepository;
+import xyz.ghibran.blog.data.repository.CommentRepository;
+import xyz.ghibran.blog.data.repository.PostRepository;
 
 /**
  * BlogVisitorService
