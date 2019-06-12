@@ -48,7 +48,7 @@ public class DataLoader implements CommandLineRunner {
         var sections = new LinkedList<PostSection>();
 
         for (int i = 0; i < 5; i++) {
-            var section = new PostSection(i + "section", lorem);
+            var section = new PostSection("section " + i, lorem + lorem + lorem + lorem + lorem);
             sectionRepo.save(section);
             sections.add(section);
         }

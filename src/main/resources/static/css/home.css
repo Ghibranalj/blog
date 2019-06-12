@@ -1,5 +1,6 @@
-body {
+html body {
   margin: 0;
+  width: 100vw;
 }
 .masthead {
   height: 90vh;
@@ -15,10 +16,8 @@ body {
   padding-bottom: 1em;
 }
 .post {
-  width: 95vw;
   text-align: center;
   margin: 2em auto;
-  max-width: 850px;
 }
 
 .carousel {
@@ -74,4 +73,10 @@ ol.carousel-indicators li.active {
 .link-unstyled:hover {
   text-decoration: none;
   color: skyblue;
+}
+
+@media only screen and (min-width: 768px) {
+  .code {
+    min-width: 22em;
+  }
 }
